@@ -1,0 +1,16 @@
+# Copyright (c) 2025 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+description: Swapper behavior
+
+compatible: "zmk,behavior-swapper"
+
+include: two_param.yaml
+
+properties:
+  bindings:
+    type: phandles
+    required: true
+  release-after-ms:
+    type: int
+    required: true

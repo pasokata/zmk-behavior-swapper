@@ -1,0 +1,22 @@
+/*
+ * Copyright (c) 2025 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <dt-bindings/zmk/behaviors.h>
+
+/ {
+    behaviors {
+#if ZMK_BEHAVIOR_OMIT(SW)
+    /omit-if-no-ref/
+#endif
+        sw: swapper {
+            compatible = "zmk,behavior-swapper";
+            #binding-cells = <2>;
+            display-name = "Swapper";
+            bindings = <&kp>;
+            release-after-ms = <3000>;
+        };
+    };
+};
